@@ -1,0 +1,103 @@
+Python~.
+assignment operators: 
+a = 10 
+name = "Hana" 
+10=a ❌[this is not allowed]
+/////////
+Shortcut operator: 
+a= 10
+a += 22
+print(a)
+The output is 32
+other operators...
+a -= b
+a *= b
+a /= b
+a //= b
+a **= b
+//////////
+Relational Operators: 
+#used to compare two values 
+a > b 
+a < b
+a <= b 
+a >= b 
+a == b
+a != b
+/////////
+Logical Operators:
+
+The and operator (only true if both are true)
+a=10
+b=20
+c=30
+print(a<b and c<a) ->false
+The or operator (only false when both are false)
+a=10
+b=20
+c=30
+print(a<b or c<a) ->true
+The not operator
+not(t) ->false
+not(f) ->true
+a=10
+b=20
+print(not(a<b))
+//////////
+Bitwise operator:
+let 
+a = 10 
+b = 4 
+print (a & b)
+-> What happens here is that the binary code of numbers 10 and 4 is ANDed
+1010 
+&
+0100 
+……………….
+0000
+///
+a = 10 
+b = 4 
+print (a | b)
+This is called the bitwise or operation
+1010
+|
+0100
+…………
+1110
+So the output is 14
+///
+a = 10 
+b = 4 
+print (a ^ b)
+This is called the bitwise XOR operation(at least one is on)
+
+1010
+^
+0100
+……….
+1110
+So the output is 14
+///
+a = 10 
+b = 4 
+print (a  b)
+///
+a = 10 
+print (a<<2)
+This is the bit operator left shift 
+So what happens here is that the binary code of a will be shifted to the left with the zero being added to the most right of the number not once but twice as a>>(2), and then the number a will be multiplied by 2^n to get the new number, this is a bit confusing to be quite honest so lets explain with an example: 
+a = 10(decimal) -> 1010, so shifting it to the left makes it 10100 and then again 101000, this in decimal is 40, which if we multiply 10* 2^2 = 40 
+what if (a) was negative? 
+a = -10 
+Its binary number is no longer 1010 but 
+sign & magnitude : 
+where the leading bit is used in place of a negative or a positive sign, a zero means the number is positive, and a one means that the number is negative. But this is not generally used, as this is an inefficient use of a bit, where 10 or 100 or 1000 are all interpreted as a negative zero. 
+Two's complement: 
+This is the standard method, where the most significant bit, the one furthest to the left, is a negative column. This still indicates that a leading zero means a positive number and a leading one means a negative number.
+To convert a positive number to two's complement, you first convert as usual, as for 41, its binary is 101001. Then add a zero at the front to indicate that it is a positive number 0101001, where without that the number would be -23. 
+Where to convert a negative number, as -57 you first convert as usual 111001, then find the least significant bit (The one furthest to the right), and then flip all the bits to its left and then add a one to the left ( Most significant bit) 1000110, you'll find that it also adds to -57.
+Take notice that the most significant bit is negative like here it is negative 64 and not positive so it is 
+  -64      32    16    8     4     2       1
+   1       0     0     0      1     1      1 
+This adds up to -57
